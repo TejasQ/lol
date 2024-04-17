@@ -6,7 +6,22 @@
     <title>GitButler RULES</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script src="index.tsx" type="module"></script>
+    <main>
+      <h1>Look at this counter!</h1>
+      <p>It's a counter that counts!</p>
+      <h2 class="counter">0</h2>
+      <button id="increment">Increment</button>
+    </main>
+    <script>
+      const counter = document.querySelector(".counter");
+      const incrementButton = document.getElementById("increment");
+
+      let count = 0;
+
+      incrementButton.addEventListener("click", () => {
+        count++;
+        counter.textContent = count;
+      });
+    </script>
   </body>
 </html>
